@@ -1,0 +1,35 @@
+---
+import LogoWeRobot from "../../assets/Logos/LogoWeRobot.astro";
+import LinkComponent from "../LinkComponent.astro";
+
+interface Props {
+  class?: string;
+  btnTitle?: string;
+  btnClass?: string;
+  srcImgBackground?: string;
+}
+const {
+  class: className,
+  btnTitle,
+  btnClass,
+  srcImgBackground,
+} = Astro.props as Props;
+---
+
+<div
+  class=`${className} w-full h-screen bg-conver bg-center `
+  style=`background-image: url(${srcImgBackground}); z-index: 0;`
+>
+  <div class="h-screen grid justify-start place-items-center pt-52">
+    <div class="m-16">
+      <LogoWeRobot />
+      <div class="pt-8">
+        <LinkComponent
+          title={btnTitle ?? ""}
+          hrefUrl="/"
+          class="bg-gray-50 rounded-md text-black text-sm h-12 w-full p-4 hover:contrast-125"
+        />
+      </div>
+    </div>
+  </div>
+</div>

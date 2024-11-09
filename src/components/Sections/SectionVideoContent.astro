@@ -1,0 +1,68 @@
+---
+import LinkComponent from "../LinkComponent.astro";
+import VideoComponent from "../VideoComponent.astro";
+
+interface Props {
+  id?: string;
+  class?: string;
+  srcVideo?: string;
+  mainTitle?: string;
+  titleAgenda?: string;
+  urlTitleAngeda?: string;
+  btnUnoName?: string;
+  btnUnoClass?: string;
+  btnUnoUrl?: string;
+  btnDosName?: string;
+  btnDosClass?: string;
+  btnDosUrl?: string;
+  _style?: string;
+}
+
+const {
+  id,
+  class: className,
+  mainTitle,
+  titleAgenda,
+  urlTitleAngeda,
+  srcVideo,
+  btnUnoName,
+  btnUnoClass,
+  btnUnoUrl,
+  btnDosName,
+  btnDosClass,
+  btnDosUrl,
+  _style,
+} = Astro.props as Props;
+---
+
+<div class=`${className} relative  rounded-lg`>
+  <VideoComponent
+    class="absolute w-full h-auto bg-cover bg-center bg-no-repeat overflow-hidden rounded-2xl"
+    urlVideo={srcVideo ?? ''}
+  />
+  <div
+    class="absolute h-screen text-center pt-10 top-0 right-0 left-0 bottom-0"
+  >    <div>
+      <h1 class="text-white text-6xl font-semibold">{mainTitle ?? ""}</h1>
+      <div class="">
+        <LinkComponent
+          title={titleAgenda ?? ""}
+          hrefUrl="/"
+          class="text-white w-full p-4 hover:contrast-125 hover:font-semibold underline"
+        />
+      </div>
+      <div class="flex justify-center place-content-center gap-4 pt-[30rem]">
+        <LinkComponent
+          title={btnUnoName ?? ""}
+          hrefUrl={btnUnoUrl ?? "/"}
+          class=`${btnUnoClass}`
+        />
+        <LinkComponent
+          title={btnDosName ?? ""}
+          hrefUrl={btnDosUrl ?? "/"}
+          class=`${btnDosClass}`
+        />
+      </div>
+    </div>
+  </div>
+</div>
