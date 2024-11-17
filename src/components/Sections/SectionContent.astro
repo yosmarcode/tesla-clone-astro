@@ -25,7 +25,7 @@ const { id, class: className, mainTitle, titleAgenda, urlTitleAngeda,  srcImgBac
     btnDosUrl,  _style} = Astro.props as Props
 ---
 <div
-  class=`${className} w-full h-screen lg:h-[50rem] bg-conver bg-center `
+  class=`${className} w-full h-screen  lg:h-[50rem] bg-conver bg-center `
   style=`background-image: url(${srcImgBackground}); z-index: 0;`
 >
   <div class="h-screen text-center pt-8">
@@ -38,7 +38,7 @@ const { id, class: className, mainTitle, titleAgenda, urlTitleAngeda,  srcImgBac
             class="text-white w-full p-4 hover:contrast-125 hover:font-semibold underline"
           />
         </div>
-        <div class=" flex justify-center place-content-center p-2 gap-4 pt-[40rem] lg:pt-[30rem]">
+        <div class=" flex justify-center place-content-center p-2 gap-4 pt-[20rem] lg:pt-[30rem]">
             <LinkComponent
             title={btnUnoName ?? ""}
             hrefUrl={btnUnoUrl ?? '/'}
