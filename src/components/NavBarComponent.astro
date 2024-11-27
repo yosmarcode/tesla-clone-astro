@@ -1,4 +1,6 @@
 ---
+import MundoIcons from "../assets/Icons/MundoIcons.astro";
+import UserIcon from "../assets/Icons/UserIcon.astro";
 import LogoTeslas from "../assets/Logos/LogoTeslas.astro";
 
 const datMenuLink = [
@@ -45,18 +47,8 @@ const datMenuLink = [
     <div
       class="flex items-center gap-x-1 md:gap-x-2 ms-auto py-1 md:ps-6 md:order-3 md:col-span-3"
     >
-      <button
-        type="button"
-        class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-white border border-gray-200 text-black hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:hover:bg-white/10 dark:text-white dark:hover:text-white dark:focus:text-white"
-      >
-        Sign in
-      </button>
-      <button
-        type="button"
-        class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl border border-transparent bg-lime-400 text-black hover:bg-lime-500 focus:outline-none focus:bg-lime-500 transition disabled:opacity-50 disabled:pointer-events-none"
-      >
-        Hire us
-      </button>
+     <MundoIcons />
+     <UserIcon />
 
       <div class="md:hidden">
         <button
@@ -116,7 +108,7 @@ const datMenuLink = [
           datMenuLink.map((r) => (
             <div>
               <a
-                class="relative inline-block text-black text-sm focus:outline-none before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1  dark:text-white hover:text-black hover:bg-neutral-400 hover:rounded-md p-2"
+                class="relative inline-block text-white text-sm focus:outline-none before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1  dark:text-white hover:text-black hover:bg-neutral-200 hover:rounded-md p-2"
                 href="#"
                 aria-current="page"
               >
